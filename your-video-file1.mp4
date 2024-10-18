@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频页面</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">YouTube</div>
+    </header>
+
+    <main>
+        <div class="video-container">
+            <h2>视频标题</h2>
+            <video controls>
+                <source src="videos/video1.mp4" type="video/mp4">
+                您的浏览器不支持HTML5视频。
+            </video>
+            <div class="channel-info">
+                <img src="images/channel.jpg" alt="频道头像" class="channel-avatar">
+                <p>频道名称</p>
+                <button id="subscribe-btn">关注</button>
+            </div>
+            <h3>推荐视频</h3>
+            <section class="video-list">
+                <article class="video" onclick="location.href='video.html?videoId=2'">
+                    <img src="images/video2.jpg" alt="视频 2" class="thumbnail">
+                    <h3>视频标题 2</h3>
+                    <p>视频描述 2</p>
+                </article>
+                <article class="video" onclick="location.href='video.html?videoId=3'">
+                    <img src="images/video3.jpg" alt="视频 3" class="thumbnail">
+                    <h3>视频标题 3</h3>
+                    <p>视频描述 3</p>
+                </article>
+                <!-- 添加更多推荐视频 -->
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 YouTube</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

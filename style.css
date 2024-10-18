@@ -1,0 +1,109 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 设置全局字体 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* 背景色 */
+    color: #333; /* 字体颜色 */
+}
+
+/* 页眉样式 */
+header {
+    background-color: #ffffff; /* 页眉背景色 */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #e0e0e0; /* 页眉底部边框 */
+}
+
+/* Logo 样式 */
+.logo {
+    flex: 1;
+}
+
+.logo-img {
+    height: 40px; /* Logo 高度 */
+}
+
+/* 导航样式 */
+nav {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+nav button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: #ff0000; /* 按钮背景色 */
+    color: #ffffff; /* 按钮文字颜色 */
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* 主体样式 */
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #ff0000; /* YouTube 红色 */
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    font-size: 24px; /* 加大字体 */
+    margin: 10px 0;
+}
+
+/* 视频列表样式 */
+.video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px; /* 视频之间的间距 */
+}
+
+.video {
+    background-color: #ffffff; /* 视频框背景色 */
+    border: 1px solid #e0e0e0; /* 边框颜色 */
+    border-radius: 5px; /* 圆角 */
+    padding: 10px;
+    cursor: pointer; /* 鼠标悬停变成手指 */
+    transition: box-shadow 0.3s; /* 添加阴影过渡效果 */
+}
+
+.video:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 鼠标悬停阴影效果 */
+}
+
+/* 缩略图样式 */
+.thumbnail {
+    width: 100%; /* 自适应宽度 */
+    border-radius: 5px; /* 圆角 */
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #ffffff; /* 页脚背景色 */
+    border-top: 1px solid #e0e0e0; /* 页脚顶部边框 */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

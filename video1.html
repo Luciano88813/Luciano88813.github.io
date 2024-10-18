@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>视频标题</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff; /* 白色背景 */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            width: 100%;
+            background-color: #ffffff; /* YouTube 红色 */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 24px;
+        }
+        .search-bar {
+            width: 80%;
+            max-width: 800px;
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+        }
+        .search-input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .search-button {
+            background: none; /* 去掉背景 */
+            border: none; /* 去掉边框 */
+            cursor: pointer; /* 鼠标变为手型 */
+            padding: 8px; /* 内边距 */
+        }
+        .search-button i {
+            font-size: 20px; /* 图标大小 */
+            color: black; /* 改为黑色 */
+            transform: scaleX(-1); /* 镜像翻转 */
+        }
+        .container {
+            width: 70%; /* 调整容器宽度 */
+            max-width: 800px;
+            margin: 20px 0;
+            display: flex; /* 使用 flexbox 布局 */
+            align-items: flex-start; /* 左对齐 */
+        }
+        video {
+            width: 700%; /* 视频宽度 */
+            height: 600px; /* 设置视频高度 */
+            border-radius: 8px; /* 圆角效果 */
+            margin-left: -500px; /* 左边距 */
+            margin-right: 20px; /* 右边距 */
+        }
+       .video-title {
+            font-size: 23px;
+             font-weight: 900; /* 设置字体为粗体 */
+            position: absolute; /* 绝对定位 */
+            bottom: 80px; /* 距离底部30px，向下移动 */
+            left: 60px; /* 距离左边10px */
+            color: black; /* 文字颜色 */
+            background: rgbaWhite(0, 0, 0, 0.7); /* 背景色带透明 */
+            padding: 5px 10px; /* 内边距 */
+            border-radius: 5px; /* 圆角效果 */ 
+        }
+        .recommendations {
+            width: 25%; /* 推荐视频区域宽度 */
+            background-color: #fff; /* 背景颜色 */
+            border-radius: 8px; /* 圆角效果 */
+            padding: 10px; /* 内边距 */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+            margin-left: 20px; /* 左边距 */
+            position: relative; /* 相对定位 */
+        }
+        .recommendation-item {
+            margin-bottom: 10px; /* 下边距 */
+            display: flex; /* 使用 flex 布局 */
+            align-items: center; /* 垂直居中 */
+        }
+        .recommendation-item img {
+            width: 100px; /* 图片宽度 */
+            height: 60px; /* 图片高度 */
+            border-radius: 5px; /* 圆角效果 */
+            margin-right: 10px; /* 右边距 */
+        }
+        .recommendation-item a {
+            text-decoration: none; /* 去掉下划线 */
+            color: #333; /* 文字颜色 */
+            font-weight: bold; /* 加粗字体 */
+        }
+        .back-link {
+            text-decoration: none;
+            color: #FF0000;
+            font-weight: bold;
+            margin-top: 15px;
+            display: inline-block;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+ <header style="display: flex; align-items: center; justify-content: flex-start; padding: 10px 20px;">
+    <img src="file:///C:/Users/shuij/Desktop/YouTube/my-logo.png" alt="自定义 Logo" style="max-width: 150px; height: auto; margin-right: 20px;"> <!-- 调整logo为150px宽 -->
+    My YouTube Clone
+</header>
+
+    <div class="search-bar">
+        <input type="text" class="search-input" placeholder="搜索...">
+        <button class="search-button"><i class="fas fa-search"></i></button>
+    </div>
+
+    <div class="container">
+        <video controls>
+            <source src="your-video-file.mp4" type="video/mp4">
+            您的浏览器不支持 HTML5 视频标签。
+        </video>
+        <div class="video-title">视频标题</div>
+        <div class="recommendations">
+            <h3>推荐视频</h3>
+            <div class="recommendation-item">
+                <img src="thumbnail1.jpg" alt="推荐视频1封面">
+                <a href="#">推荐视频1</a>
+            </div>
+            <div class="recommendation-item">
+                <img src="thumbnail2.jpg" alt="推荐视频2封面">
+                <a href="#">推荐视频2</a>
+            </div>
+            <div class="recommendation-item">
+                <img src="thumbnail3.jpg" alt="推荐视频3封面">
+                <a href="#">推荐视频3</a>
+            </div>
+            <div class="recommendation-item">
+                <img src="thumbnail4.jpg" alt="推荐视频4封面">
+                <a href="#">推荐视频4</a>
+            </div>
+            <div class="recommendation-item">
+                <img src="thumbnail5.jpg" alt="推荐视频5封面">
+                <a href="#">推荐视频5</a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a class="back-link" href="fake_youtube_channel.html">返回频道</a>
+    </div>
+
+</body>
+</html>
